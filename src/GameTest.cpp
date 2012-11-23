@@ -46,9 +46,7 @@ int health = 10;
 void loadMap( char mapName[10][20], int x, int y ) {
 	int i;
 	for( i = 0; i < 10; ++i ) {
-		//mvaddstr(i, 0, map[i]);
 		mvprintw( i + y, x, "%s", mapName[i] );
-		//mvprintw(3, 4, "FUCK");
 	}
 }
 void moveDude( char m[10][20], int newX, int newY ) {
