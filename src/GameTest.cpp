@@ -1,9 +1,9 @@
 //============================================================================
 // Name        : GameTest.cpp
-// Author      : Luc Paul Labont�
-// Version     :
+// Author      : Luc Paul Labonté
+// Version     : Alpha
 // Copyright   : 2012
-// Description : Hello World in C++, Ansi-style
+// Description : RPG game test with ncurses
 //============================================================================
 
 #include <iostream>
@@ -96,16 +96,14 @@ void obstacle( char m[10][20], int x, int y ) {
 
 int main() {
 
-
 	int c = 0;
 	int run = 1;
-	//WINDOW* win;
+
 	initscr();
 	clear();
 	noecho();
 	cbreak();
 
-	//win = newwin(20, 40, 0, 0);
 	keypad(stdscr, TRUE);
 	clear();
 
@@ -114,10 +112,11 @@ int main() {
 
 		loadMap( map, 0, 0 );
 
-		mvprintw( 18, 0, "Health: %d/10", health );
-		//wrefresh(win);
+		mvprintw( 18, 0, "Health: %02d/10", health );
 		refresh();
+
 		c = getch();
+
 		switch(c) {
 
 			case KEY_UP:
@@ -140,17 +139,13 @@ int main() {
 				obstacle( map, posX + 1, posY);
 			break;
 
-			case KEY_END:
+			case KEY_END:	// this one may not work in Unix... to fix.
 				run = 0;
 			break;
 		}
 		refresh();
 
 	}
-	//wgetch(win);
-
-	//delwin(win);
-	endwin();
 
 
 	return 0;
