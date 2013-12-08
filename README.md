@@ -8,5 +8,5 @@ http://www.youtube.com/watch?v=Lvrxv_i3da0&feature=related
 
 (The original question: http://www.youtube.com/watch?v=cUqxmaDUjog)
 
-PS: Work in progress...
+PS: No nolger in development!
 =======================
